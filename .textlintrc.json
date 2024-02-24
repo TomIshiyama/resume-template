@@ -1,0 +1,16 @@
+{
+  "plugins": {},
+  "filters": {},
+  "rules": {
+    "ja-hiragana-fukushi": true,
+    "ja-hiragana-hojodoushi": true,
+    "ja-hiragana-keishikimeishi": true,
+    "ja-no-inappropriate-words": true,
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "period-in-list-item": true,
+    "preset-ja-spacing": true,
+    "preset-ja-technical-writing": true,
+    "preset-jtf-style": true,
+    "prh": true
+  }
+}
