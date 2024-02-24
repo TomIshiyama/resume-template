@@ -1,0 +1,3 @@
+{
+  "*.md": ["prettier -w", "textlint --cache --fix", "textlint --cache"]
+}

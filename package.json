@@ -1,7 +1,14 @@
 {
   "name": "resume",
   "packageManager": "yarn@4.1.0",
+  "scripts": {
+    "lint:text": "textlint --cache $(git diff main --name-only) -f pretty-error",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "md-to-pdf": "^5.2.4",
     "textlint": "^14.0.3",
     "textlint-rule-ja-hiragana-fukushi": "^1.3.0",
