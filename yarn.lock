@@ -833,6 +833,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"boundary@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "boundary@npm:1.0.1"
+  checksum: 10c0/e2eaa9a103af04d23aa85889b9dcc2e373104a0b85c70a2b28e4d7a87891c140a2955c8675e46d8fd23be27e348c38cff3d08d43c61aa453eb3831dc14a4e7a1
+  languageName: node
+  linkType: hard
+
 "boundary@npm:^2.0.0":
   version: 2.0.0
   resolution: "boundary@npm:2.0.0"
@@ -3832,15 +3839,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "prettier@npm:3.2.5"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
-  languageName: node
-  linkType: hard
-
 "prh@npm:^5.4.4":
   version: 5.4.4
   resolution: "prh@npm:5.4.4"
@@ -4188,7 +4186,6 @@ __metadata:
     husky: "npm:^9.0.11"
     lint-staged: "npm:^15.2.2"
     md-to-pdf: "npm:^5.2.4"
-    prettier: "npm:^3.2.5"
     textlint: "npm:^14.0.3"
     textlint-rule-ja-hiragana-fukushi: "npm:^1.3.0"
     textlint-rule-ja-hiragana-hojodoushi: "npm:^1.1.0"
@@ -4200,6 +4197,7 @@ __metadata:
     textlint-rule-preset-ja-technical-writing: "npm:^10.0.1"
     textlint-rule-preset-jtf-style: "npm:^2.3.14"
     textlint-rule-prh: "npm:^6.0.0"
+    textlint-rule-spellcheck-tech-word: "npm:^5.0.0"
   languageName: unknown
   linkType: soft
 
@@ -4486,6 +4484,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"spellcheck-technical-word@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "spellcheck-technical-word@npm:2.0.0"
+  dependencies:
+    structured-source: "npm:^3.0.2"
+    technical-word-rules: "npm:^1.4.2"
+  checksum: 10c0/0dd1ff9a6ba9094d9a71e07518e7a60a80ed6ceeae353ad139e4e734ad275dd241bcdf9ebf7751206d4ab28f7c0c1b7540f73bf3fbc92ff100140666bf012ecf
+  languageName: node
+  linkType: hard
+
 "sprintf-js@npm:^1.1.3":
   version: 1.1.3
   resolution: "sprintf-js@npm:1.1.3"
@@ -4650,6 +4658,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"structured-source@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "structured-source@npm:3.0.2"
+  dependencies:
+    boundary: "npm:^1.0.1"
+  checksum: 10c0/429cb09f2a9aaff3c993016e359f93861e4f4e0bb520623d81bb5dc8989825edec45a362a1263d350459c6c23acb3ec96f6a2d03de4c77147b5735b818e57e9e
+  languageName: node
+  linkType: hard
+
 "structured-source@npm:^4.0.0":
   version: 4.0.0
   resolution: "structured-source@npm:4.0.0"
@@ -4753,10 +4770,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"technical-word-rules@npm:^1.4.2":
+  version: 1.9.5
+  resolution: "technical-word-rules@npm:1.9.5"
+  checksum: 10c0/d7866506649ed6aa796ab72909fd474efe7c107aeaec9ea576fe3442bd01c21618886cfd0e6d8355ddc984cef13bf924ce252d1455e21cf255ebf11dcf57e4e2
+  languageName: node
+  linkType: hard
+
 "text-table@npm:^0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 10c0/02805740c12851ea5982686810702e2f14369a5f4c5c40a836821e3eefc65ffeec3131ba324692a37608294b0fd8c1e55a2dd571ffed4909822787668ddbee5c
+  languageName: node
+  linkType: hard
+
+"textlint-rule-helper@npm:^1.1.2":
+  version: 1.2.0
+  resolution: "textlint-rule-helper@npm:1.2.0"
+  dependencies:
+    unist-util-visit: "npm:^1.1.0"
+  checksum: 10c0/699a2599099bd4dfa7c3c20cc504cbe46c735473872b16ed049d63359a5a783def9ac136e649224e89b2300532477ce43b6a0f6d961e7e7eb1de872b60b8276e
   languageName: node
   linkType: hard
 
@@ -5206,6 +5239,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"textlint-rule-spellcheck-tech-word@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "textlint-rule-spellcheck-tech-word@npm:5.0.0"
+  dependencies:
+    spellcheck-technical-word: "npm:^2.0.0"
+    textlint-rule-helper: "npm:^1.1.2"
+  peerDependencies:
+    textlint: ">= 5.6.0"
+  checksum: 10c0/740c07330f7ce652c1e71e0585d12d5a01f34981f79711c0ca6d27fd212a12b999c9bcbfa8d0afcb8ca577d631ab0f899469c066d6204c424a90f57031f4a267
+  languageName: node
+  linkType: hard
+
 "textlint-tester@npm:^13.3.1":
   version: 13.4.1
   resolution: "textlint-tester@npm:13.4.1"
@@ -5428,6 +5473,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-is@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "unist-util-is@npm:3.0.0"
+  checksum: 10c0/e46186214fabcef3c4947ab188ae272965465ec5c40652934025f6382c58dff6edca40860528f72718e42f858d1ce7db2754d5198beb96eff0379e4c3c34218f
+  languageName: node
+  linkType: hard
+
 "unist-util-is@npm:^4.0.0":
   version: 4.1.0
   resolution: "unist-util-is@npm:4.1.0"
@@ -5444,6 +5496,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-visit-parents@npm:^2.0.0":
+  version: 2.1.2
+  resolution: "unist-util-visit-parents@npm:2.1.2"
+  dependencies:
+    unist-util-is: "npm:^3.0.0"
+  checksum: 10c0/ca88e2f88f3c4849f1bb4e90edb3f5fa66bf94656165dd74027971c393274d25b1b34974b18da336c4e2b45771495d5dac2f80571fa25f86c8cec859287c25f8
+  languageName: node
+  linkType: hard
+
 "unist-util-visit-parents@npm:^3.0.0":
   version: 3.1.1
   resolution: "unist-util-visit-parents@npm:3.1.1"
@@ -5451,6 +5512,15 @@ __metadata:
     "@types/unist": "npm:^2.0.0"
     unist-util-is: "npm:^4.0.0"
   checksum: 10c0/231c80c5ba8e79263956fcaa25ed2a11ad7fe77ac5ba0d322e9d51bbc4238501e3bb52f405e518bcdc5471e27b33eff520db0aa4a3b1feb9fb6e2de6ae385d49
+  languageName: node
+  linkType: hard
+
+"unist-util-visit@npm:^1.1.0":
+  version: 1.4.1
+  resolution: "unist-util-visit@npm:1.4.1"
+  dependencies:
+    unist-util-visit-parents: "npm:^2.0.0"
+  checksum: 10c0/8fb61725270059034d987813816e6c2d6362f55d4d19936db9ce23a5ace0ae4d584064ceb94dee6618e3318aef087505607f7ccc8c4305fbb644c3b643ae0059
   languageName: node
   linkType: hard
 
