@@ -1,0 +1,20 @@
+{
+  timezone: "Asiz/Tokyo",
+  labels: ["dependencies"],
+  extends: ["config:base"],
+  packageRules: [
+    {
+      packagePatterns: [
+        "husky",
+        "lint-staged",
+        "md-to-pdf",
+        "textlint",
+        "^textlint-rule",
+      ],
+      automerge: true,
+      // The bot preffer to merge daytime as I may be working during the night.
+      // Anytime weekday is fine.
+      schedule: ["* 05-18 * * mon-fri"],
+    },
+  ],
+}
