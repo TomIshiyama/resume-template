@@ -1,0 +1,11 @@
+version: 1
+rules:
+  - expected: React
+    pattern:
+      - reactjs
+      - react.js
+      - React.js
+      - ReactJs
+  - expected: Zenn
+    pattern:
+      - zenn

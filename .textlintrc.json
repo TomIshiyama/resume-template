@@ -8,9 +8,18 @@
     "ja-no-inappropriate-words": true,
     "no-mixed-zenkaku-and-hankaku-alphabet": true,
     "period-in-list-item": true,
-    "preset-ja-spacing": true,
+    "textlint-rule-spellcheck-tech-word": true,
     "preset-ja-technical-writing": true,
-    "preset-jtf-style": true,
-    "prh": true
+    "preset-jtf-style": {
+      "3.1.1.全角文字と半角文字の間": false
+    },
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": {
+        "space": "always"
+      }
+    },
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    }
   }
 }
