@@ -1,11 +1,11 @@
 version: 1
 rules:
   - expected: React
-    pattern:
-      - reactjs
-      - react.js
-      - React.js
-      - ReactJs
+    pattern: /react\.?js/i
+  - expected: JavaScript
+    pattern: /java\s?script/i
+  - expected: TypeScript
+    pattern: /type\s?script/i
   - expected: Zenn
     pattern:
       - zenn
