@@ -13,3 +13,6 @@
 
 #!.yarn/cache
 .pnp.*
+
+.DS_Store
+**/*.pdf
