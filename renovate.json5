@@ -1,9 +1,8 @@
 {
-  timezone: "Asiz/Tokyo",
+  timezone: "Asia/Tokyo",
   labels: ["dependencies"],
   extends: ["config:base"],
-  //   dependencyDashboard: true,
-
+  dependencyDashboard: true,
   packageRules: [
     {
       packagePatterns: ["husky", "lint-staged", "md-to-pdf", "textlint"],
