@@ -2,18 +2,22 @@
   timezone: "Asiz/Tokyo",
   labels: ["dependencies"],
   extends: ["config:base"],
+  //   dependencyDashboard: true,
+
   packageRules: [
     {
-      packagePatterns: [
-        "husky",
-        "lint-staged",
-        "md-to-pdf",
-        "textlint",
-        "^textlint-rule",
-      ],
+      packagePatterns: ["husky", "lint-staged", "md-to-pdf", "textlint"],
+      // except for major update.
+      matchUpdateTypes: ["minor", "patch", "pin", "digest"],
       automerge: true,
       // The bot preffer to merge daytime as I may be working during the night.
       // Anytime weekday is fine.
+      schedule: ["* 05-18 * * mon-fri"],
+    },
+    {
+      matchPackagePatterns: ["^textlint-rule"],
+      groupName: "textlint-rule-hoge packages",
+      automerge: true,
       schedule: ["* 05-18 * * mon-fri"],
     },
   ],
