@@ -1,0 +1,24 @@
+env:
+  DIR: "docs/**/*.md"
+
+on:
+  pull_request:
+    paths:
+      - "$DIR"
+
+jobs:
+  textlint:
+    name: Run textlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+      - run: node -v
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Check textlint
+        run: yarn textlint --cache "$DIR" | true
+        shell: bash {0}

@@ -4,7 +4,7 @@
   "scripts": {
     "build:pdf": "md-to-pdf --config-file ./pdf-configs/config.js",
     "format": "prettier -w docs/**/*.md",
-    "lint:text": "textlint --cache $(git diff main --name-only) -f pretty-error",
+    "textlint:diff": "textlint --cache $(git diff main --name-only) -f pretty-error",
     "lint-staged": "lint-staged",
     "prepare": "husky"
   },
