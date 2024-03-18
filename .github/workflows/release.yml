@@ -38,7 +38,7 @@ jobs:
         run: yarn build:pdf $BASE_DIR/$TARGET.md
       # https://github.com/softprops/action-gh-release
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           draft: true
           tag_name: ${{ github.ref }}
