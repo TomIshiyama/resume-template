@@ -12,7 +12,7 @@ on:
       target:
         description: "input the target you want to output."
         required: false
-        default: "$BASE_DIR/README"
+        default: "README"
         type: string
 
 jobs:
@@ -29,6 +29,8 @@ jobs:
           # use node-version via package.json
           node-version-file: "package.json"
           cache: "yarn"
+      - name: Install dependencies
+        run: yarn install --immutable
       - name: Use variables
         run: |
           echo "new release version : $NEW_VERSION"
@@ -47,7 +49,7 @@ jobs:
             Uploaded the following
             - $BASE_DIR/$TARGET.md
           # NOTE: improve to upload on the `dist` directory
-          files: ${{ $BASE_DIR/$TARGET }}.pdf
+          files: ${{ env.BASE_DIR }}/${{ env.TARGET }}.pdf
       # see. https://github.com/actions/create-release
       # - name: Create release
       #   id: create_release
