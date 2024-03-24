@@ -47,7 +47,7 @@ jobs:
             Uploaded the following
             - $BASE_DIR/$TARGET.md
           # NOTE: improve to upload on the `dist` directory
-          files: ${{ $BASE_DIR/$TARGET }}.pdf
+          files: ${{ $BASE_DIR}}/${{$TARGET }}.pdf
       # see. https://github.com/actions/create-release
       # - name: Create release
       #   id: create_release
