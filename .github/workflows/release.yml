@@ -1,6 +1,9 @@
 env:
   BASE_DIR: "./docs"
 
+permissions:
+  contents: write
+
 # Run Manually
 on:
   workflow_dispatch:
