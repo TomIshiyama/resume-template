@@ -29,6 +29,6 @@
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
   "resolutions": {
-    "puppeteer": "22.5.0"
+    "puppeteer": "22.6.1"
   }
 }
