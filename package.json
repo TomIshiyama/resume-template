@@ -5,7 +5,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build:pdf": "md-to-pdf --config-file ./pdf-configs/config.js",
+    "pdf": "markdown-pdf --config-file ./pdf-configs/config.js",
     "format": "prettier -w docs/**/*.md",
     "textlint:diff": "textlint --cache $(git diff main --name-only) -f pretty-error",
     "lint-staged": "lint-staged",
@@ -14,7 +14,6 @@
   "devDependencies": {
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "md-to-pdf": "^5.2.4",
     "textlint": "^14.0.3",
     "textlint-rule-ja-hiragana-fukushi": "^1.3.0",
     "textlint-rule-ja-hiragana-hojodoushi": "^1.1.0",
@@ -28,7 +27,7 @@
     "textlint-rule-prh": "^6.0.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
-  "resolutions": {
-    "puppeteer": "22.5.0"
+  "dependencies": {
+    "markdown-pdf": "^11.0.0"
   }
 }
