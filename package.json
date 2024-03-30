@@ -5,7 +5,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "pdf": "markdown-pdf --config-file ./pdf-configs/config.js",
+    "pdf": "md-to-pdf --config-file ./pdf-configs/config.js",
     "format": "prettier -w docs/**/*.md",
     "textlint:diff": "textlint --cache $(git diff main --name-only) -f pretty-error",
     "lint-staged": "lint-staged",
@@ -27,7 +27,7 @@
     "textlint-rule-prh": "^6.0.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
-  "dependencies": {
-    "markdown-pdf": "^11.0.0"
+  "optionalDependencies": {
+    "md-to-pdf": "^5.2.4"
   }
 }
