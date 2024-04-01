@@ -8,10 +8,6 @@ permissions:
 on:
   workflow_dispatch:
     inputs:
-      new_version:
-        description: "Please input the release version."
-        required: false
-        type: string
       target:
         description: "input the target you want to output."
         required: false
@@ -21,27 +17,25 @@ on:
 jobs:
   steps:
     env:
-      NEW_VERSION: ${{ inputs.new_version }}
       TARGET: ${{ inputs.target }}
     name: Release document
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: yarn cache clean
       - uses: actions/setup-node@v4
         with:
           # use node-version via package.json
           node-version-file: "package.json"
           cache: "yarn"
       - name: Install dependencies
-        run: |
-          yarn install --immutable
+        run: yarn install --immutable
       - name: Use variables
         run: |
-          echo "new release version : $NEW_VERSION"
           echo "target file : $TARGET"
           echo "full path: $BASE_DIR/$TARGET.md"
       - name: Build pdf
-        run: yarn pdf "$BASE_DIR/$TARGET.md"
+        run: yarn dlx -p md-to-pdf md-to-pdf "$BASE_DIR/$TARGET.md" --config-file ./pdf-configs/config.js
       # https://github.com/softprops/action-gh-release
       - name: Release
         uses: softprops/action-gh-release@v1
@@ -51,7 +45,7 @@ jobs:
           name: Release ${{ github.ref }}
           body: |
             Uploaded the following
-            - $BASE_DIR/$TARGET.md
+            - ${{ env.BASE_DIR }}/${{ env.TARGET }}.md
           # NOTE: improve to upload on the `dist` directory
           files: ${{ env.BASE_DIR }}/${{ env.TARGET }}.pdf
       # see. https://github.com/actions/create-release
