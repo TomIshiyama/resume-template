@@ -7,6 +7,7 @@
     "ja-hiragana-keishikimeishi": true,
     "ja-no-inappropriate-words": true,
     "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "ja-no-orthographic-variants": true,
     "period-in-list-item": true,
     "textlint-rule-spellcheck-tech-word": true,
     "preset-ja-technical-writing": true,
