@@ -33,6 +33,8 @@ jobs:
           # use node-version via package.json
           node-version-file: "package.json"
           cache: "yarn"
+      # - name: Install pre dependencies
+      #   run: yarn dlx markdown-pdf
       - name: Install dependencies
         run: yarn install --immutable
       - name: Use variables
