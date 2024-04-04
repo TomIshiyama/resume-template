@@ -22,7 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: yarn cache clean
       - uses: actions/setup-node@v4
         with:
           # use node-version via package.json
@@ -44,32 +43,6 @@ jobs:
           tag_name: ${{ github.ref }}
           name: Release ${{ github.ref }}
           body: |
-            Uploaded the following
-            - ${{ env.BASE_DIR }}/${{ env.TARGET }}.md
+            Please download my resume from the file below.
           # NOTE: improve to upload on the `dist` directory
           files: ${{ env.BASE_DIR }}/${{ env.TARGET }}.pdf
-      # see. https://github.com/actions/create-release
-      # - name: Create release
-      #   id: create_release
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: Release ${{ github.ref }}
-      #     body: |
-      #       Uploaded the following resume.
-      #       - "$BASE_DIR/$TARGET"
-      #     draft: false
-      #     prerelease: false
-      # https://github.com/actions/upload-release-asset to
-      # - name: Upload Release Asset
-      #   id: upload-release-asset
-      #   uses: actions/upload-release-asset@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-      #     asset_path: "$BASE_DIR/$TARGET"
-      #     asset_name: "$TARGET"
-      #     asset_content_type: application/pdf
