@@ -5,7 +5,13 @@
   dependencyDashboard: true,
   packageRules: [
     {
-      packagePatterns: ["husky", "lint-staged", "md-to-pdf", "textlint"],
+      packagePatterns: [
+        "husky",
+        "lint-staged",
+        "md-to-pdf",
+        "textlint",
+        "yarn",
+      ],
       // except for major update.
       matchUpdateTypes: ["minor", "patch", "pin", "digest"],
       automerge: true,
