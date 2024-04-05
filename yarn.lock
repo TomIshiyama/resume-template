@@ -4171,6 +4171,7 @@ __metadata:
     lint-staged: "npm:^15.2.2"
     md-to-pdf: "npm:^5.2.4"
     textlint: "npm:^14.0.3"
+    textlint-filter-rule-comments: "npm:^1.2.2"
     textlint-rule-ja-hiragana-fukushi: "npm:^1.3.0"
     textlint-rule-ja-hiragana-hojodoushi: "npm:^1.1.0"
     textlint-rule-ja-hiragana-keishikimeishi: "npm:^1.1.0"
@@ -4769,6 +4770,15 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 10c0/02805740c12851ea5982686810702e2f14369a5f4c5c40a836821e3eefc65ffeec3131ba324692a37608294b0fd8c1e55a2dd571ffed4909822787668ddbee5c
+  languageName: node
+  linkType: hard
+
+"textlint-filter-rule-comments@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "textlint-filter-rule-comments@npm:1.2.2"
+  peerDependencies:
+    textlint: ">=6.8.0"
+  checksum: 10c0/39edffd3f8ffb057cc9b1810bfb85f95b031625b1c1da7834319247fdde01191cacb4b81d2584a05257b7a70d84feb8018b6b0429c0a95e709a0833d6d3da402
   languageName: node
   linkType: hard
 
