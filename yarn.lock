@@ -2976,8 +2976,8 @@ __metadata:
   linkType: hard
 
 "md-to-pdf@npm:^5.2.4":
-  version: 5.2.4
-  resolution: "md-to-pdf@npm:5.2.4"
+  version: 5.2.5
+  resolution: "md-to-pdf@npm:5.2.5"
   dependencies:
     arg: "npm:^5.0.2"
     chalk: "npm:^4.1.2"
@@ -2995,7 +2995,7 @@ __metadata:
   bin:
     md-to-pdf: dist/cli.js
     md2pdf: dist/cli.js
-  checksum: 10c0/4270d8ccafd34532bcfabf5312cac94c9060570a2344d40e53c661f31585ad1d9e0ea6638f05d4a9509365869a3e1b4f348347f53f282ec72bfccd8560361e2a
+  checksum: 10c0/18c595a60c7653f4c2780a4b0261fe13fd206ae9b0373e34c91071ba2b9fa665cd145758ee012861a61e4871db2ae89aed5fb691d99a7ce88a54bbe0c2622e2a
   languageName: node
   linkType: hard
 
